@@ -1,0 +1,728 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+}
+
+:root {
+    --main-color: #ffabe1;
+    --hover-color: hsl(37, 94%, 57%);
+    --body-color: #1e1e2a;
+    --container-color:#2d2e37;
+    --text-color: #fcfeff;
+    --head-color: #645caa;
+    --nav-color: #adddd0;
+    --background--footer: #2b4865;
+    --nama-footer: #BFACE0;
+    --play-color: #54BAB9;
+    --like-color: #000;
+}
+
+.white-mode{
+    --body-color: #fcfeff;
+    --text-color: #1e1e2a;
+    --nav-color: #293462;
+    --container-color:#DDDDDD;
+    --background--footer: #A084CA;
+    --nama-footer: #47B5FF;
+    --play-color: #3CCF4E;
+    
+}
+
+.like-color {
+    --like-color: #ffabe1;
+}
+
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+}
+body{
+    background: var(--body-color);
+    color: var(--text-color);
+}
+section{
+    padding: 3rem 0 2rem;
+}
+/* .container{
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+} */
+.bx {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--body-color);
+    z-index: 100;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+.logo{
+    font-size: 64px;
+    color: var(--text-color);
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 auto 0 0;
+}
+.logo span {
+    color: var(--main-color);
+}
+.search-box{
+    max-width: 240px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    padding: 8px 15px;
+    background: var(--container-color);
+    border-radius: 4rem;
+    margin-right: 1rem;
+}
+
+
+.search-box .bx {
+    font-size: 1.1rem;
+    color: #e7e7e7;
+}
+.search-box button {
+    background: var(--container-color);
+    border : 0;
+}
+
+.search-box .bx:hover {
+    color: var(--main-color);
+}
+#search-input{
+    width: 100%;
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    background: transparent;
+    font-size: 0.938rem;
+}
+.user {
+    display: flex;
+}
+.user-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 4rem;
+    object-fit: cover;
+    object-position: center;
+}
+.navbar{
+    position: fixed;
+    top: 50%;
+    left: 7px;
+    transform: translateY(-50%);
+    flex-direction: column;
+    display: flex;
+    z-index: 9999;
+    row-gap: 2.1rem;
+}
+
+.navbar2{
+    position: fixed;
+    justify-content: center;
+    top: 0%;
+    /* left: 7px; */
+    margin: auto;
+    transform: translateY(50%);
+    flex-direction: row;
+    display: flex;
+    row-gap: 2.1rem;
+}
+
+.nav-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--nav-color);
+    font-size: 0.8rem;
+}
+.nav-link :hover {
+    color: var(--main-color);
+    transition: 0.3s all linear;
+    transform: scale(1.1);
+}
+.nav-link .bx {
+    font-size: 1.6rem;
+}
+.nav-link .title {
+    font-size: 0.7rem;
+}
+
+.beranda {
+    position: relative;
+    min-height: 470px;
+}
+
+.tombol-ntn :hover {
+    color: var(--main-color);
+    transition: 0.3s all linear;
+    transform: scale(1.1);
+}
+
+.box-text {
+    margin-bottom: 2rem;
+}
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--head-color);
+    padding: 8px 14px;
+    border: 1px solid rgba(7, 37, 56, 0.68);
+    margin-bottom: 1.5rem;
+}
+.judul-populer {
+    font-size: 1.2rem;
+}
+.more {
+    display: inline-block;
+    background-color: var(--main-color);
+    color:#fff;
+    padding: .75rem 1rem; 
+    border-radius: 3rem;
+    transition: .3s;
+    margin-top: 0.5rem;
+    font-weight: 100px;
+}
+
+.more a {
+    color:#000;
+}
+
+.tombol:hover{
+    background-color: var(--first-color-alt);
+}
+
+.img {
+    background-image: url(me.jpg);
+    background-color: var(--nav-color);
+    background-size: cover;
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border: 1px solid var(--main-color);
+    margin-bottom: 2rem;
+}
+.text {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+.text span {
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+    color: var(--nama-footer);
+}
+.desc {
+    font-size: 15px;
+}
+.footer {
+    background: var(--background--footer);
+}
+.sosmed-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+.sosmed-range{
+    padding: 15px;
+}
+
+/* --------------------------------------------------------tombol----------------------------------------------------- */
+.check-box{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    transform: translateX(20px);
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+    background-color: #fff;
+    box-shadow: 0 0 0 50000px #000;
+}
+
+.check:before,
+.check:after {
+    border-radius: 50%;
+    content: '';
+    height: 16px;
+    position: absolute;
+    top: 2px;
+    transition: transform 0.5s ease;
+    width: 16px;
+}
+
+.check:before {
+    background-color: #000;
+    left: 2px;
+}
+
+.check {
+    background-color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: background-color 0.5s ease-in, 
+    box-shadow 0.5s ease-in;
+
+    width: 40px;
+}
+
+/* --------------------------------------------------------tombol----------------------------------------------------- */
+
+
+
+.containerer {
+    opacity: 90%;
+    width: 400px;
+    min-height: 400px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+}
+ 
+.containerer .login-text {
+    color: #111;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 20px;
+    display: block;
+}
+ 
+.containerer .login-email .input-group {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+}
+ 
+.containerer .login-email .input-group input {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #e7e7e7;
+    padding: 15px 20px;
+    font-size: 1rem;
+    border-radius: 30px;
+    background: transparent;
+    outline: none;
+    transition: 0.3s;
+}
+ 
+.containerer .login-email .input-group input:focus, .containerer .login-email .input-group input:valid {
+    border-color: #a29bfe;
+}
+ 
+.containerer .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+}
+ 
+.containerer .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
+ 
+.login-register-text {
+    color: red;
+    font-weight: 600;
+}
+
+
+ 
+.containerer-logout {
+    width: 500px;
+    min-height: 200px;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,.3);
+    padding: 40px 30px;
+}
+ 
+.containerer-logout .login-email .input-group .btn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    text-align: center;
+    border: none;
+    background: #a29bfe;
+    outline: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: #FFF;
+    cursor: pointer;
+    transition: .3s;
+    margin-top: 20px;
+}
+ 
+.containerer-logout .login-email .input-group .btn:hover {
+    transform: translateY(-5px);
+    background: #6c5ce7;
+}
+
+.font-login {
+    color: #000;
+}
+ 
+
+
+/* --------------------------------------------------------tombol----------------------------------------------------- */
+
+
+.list-music{
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+
+.list-music a{
+    display: flex;
+    text-decoration: none;
+    /* width: 100%; */
+    max-width: 1068px;
+    margin: auto;
+}
+
+
+.music{
+    cursor:default;
+    opacity: 90%;
+    background: var(--background--footer);
+    width: 300px;
+    margin: 5px;
+    border-radius: 5px;
+    transition: 0.3s all linear;
+    overflow: hidden;
+}
+
+.music-text {
+    padding-right: 15px;
+    text-align: right;
+    color: white;
+}
+
+.judul h2{
+    font-size: 20px;
+}
+
+.judul h3{
+    font-size: 20px;
+    margin-bottom: 6px;
+    text-align: start;
+    margin-left: 15px;
+}
+
+.judul .bx {
+    border-radius: 50px;
+    background-color: var(--play-color);
+    font-size: 60px;
+    /* float: left; */
+
+    margin-left: 15px;
+    margin-top: 10px;
+    opacity: 0%;
+    
+}
+
+.judul .bx:hover {
+    background-color: var(--main-color);
+    transition: 0.3s all linear;
+    transform: scale(1.1);
+    opacity: 100%;
+}
+
+
+.genre p{
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.genre p span s{
+    font-size: 12px;
+    padding: 0px 8px;
+}
+
+.genre p span x{
+    font-size: 18px;
+    color: white;
+    background: rgb(209, 82, 82);
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+
+.music-image{
+    /* background-color: black; */
+    height: 250px;
+    margin-bottom: 7px;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+}
+
+
+
+.music:hover{
+
+    transform: scale(1.03);
+    
+}
+
+.music:hover .judul .bx{
+    opacity: 100%;
+}
+
+
+
+
+.container table {
+    position: relative;
+    z-index: 2;
+    /* left: 50%; */
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+    width: 100% ;
+    /* height: 400px; */
+    background: #2d2e37;
+    text-align: center;
+    /* border-radius: 12px 12px 12px 12px; */
+    overflow: hidden ;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 12px rgba(32, 32, 32, .3);
+    color: var(--main-color);
+
+}
+
+a {
+    color: var(--nav-color);
+    padding-left: 3px;
+}
+
+th,td{
+    padding: 12px 15px;
+    width: -100%;
+}
+
+th {
+    color: var(--text-color);
+    text-transform: uppercase;
+    background: var(--head-color) ;
+}
+
+tr:nth-child(odd) {
+    background-color: #1e1e2a;
+}
+tr:hover {
+    background-color: #645caa;
+    opacity: 90%;
+    cursor : pointer;
+}
+
+.text-cari  {
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.hasil-pencarian {
+    font-size: 20px;
+}
+
+.hasil-pencarian img {
+    width: 30%;
+    height: 90px;
+}
+
+.bookmark .bx {
+    font-size: 40px;
+    float: left;
+
+    padding-left: 15px;
+    margin-top: 10px;
+    
+}
+
+.bookmark button {
+    width : 20px;
+    padding-left: 15px;
+    background-color: transparent;
+    border: none;
+    z-index: -1;
+}
+
+.likes .bx {
+    font-size: 40px;
+    float: left;
+    padding-left: 25px;
+    margin-top: 10px;
+    color: var(--like-color);
+    
+}
+.likes i {
+    size: 5%;
+    padding-left : 20px;
+    background-color: transparent;
+    border: solid;
+    z-index: -1;
+}
+
+@media (max-width: 700px) {
+    .music-image{
+        /* background-color: black; */
+        height: 180px;
+    }
+    .bookmark .bx {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .containerer {
+        width: 300px;
+    }
+    .logo {
+        font-size: 50px;
+    }
+    .text {
+        font-size: 18px;
+    }
+    .text span {
+        font-size: 18px;
+    }
+    .bookmark .bx {
+        font-size: 25px;
+    }
+    .desc {
+        font-size : 13px;
+    } 
+    .judul h3{
+        font-size: 12px;
+    }
+    .judul h1{
+        font-size: 12px;
+    }
+    
+    .judul .bx {
+        font-size: 36px;
+        
+    }
+    .genre p{
+        font-size: 9px;
+    }
+    .music-image{
+        /* background-color: black; */
+        height: 150px;
+    }
+    .hasil-pencarian {
+        font-size: 15px;
+    }
+    .hasil-pencarian img {
+        width: 80%;
+        height: 60px;
+    }
+}
+
+@media (max-width: 700px) {
+    .logo {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        font-size: 30px;
+    }
+    .desc {
+        font-size : 10px;
+    } 
+    .judul h3{
+        font-size: 9px;
+        
+    }
+    .bookmark .bx {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 13px;
+    }
+    .text span {
+        font-size: 13px;
+    }
+    .judul h1{
+        font-size: 9px;
+    }
+    .judul .bx {
+        font-size: 20px;
+        
+    }
+    .genre p{
+        font-size:5px;
+    }
+    .music-image{
+        /* background-color: black; */
+        height: 90px;
+    }
+    .hasil-pencarian {
+        font-size: 10px;
+    }
+    .hasil-pencarian img {
+        width: 50%;
+        height: 50px;
+    }
+    
+}
